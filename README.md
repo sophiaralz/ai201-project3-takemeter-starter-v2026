@@ -42,7 +42,14 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
+r/cscareerquestions, a Reddit community where software engineers and CS students discuss job searching, interviews, salaries, and the tech job market.
 
+The classifier sorts posts into:
+
+1. career_doubt: the writer questions their own future in tech because of something that happened to them personally, such as rejections, layoffs, or struggling in interviews or classes
+2. market_take: a claim about the industry, not about the writer
+3. data_backed: argues with a checkable fact
+4. advice_request: writer asks for advice from peers
 
 ---
 
@@ -57,6 +64,7 @@
 ### `label_one`
 
 **Definition:**
+
 
 **Example 1:**
 >
