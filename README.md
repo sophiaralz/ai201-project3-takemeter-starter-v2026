@@ -44,12 +44,7 @@
 
 r/cscareerquestions, a Reddit community where software engineers and CS students discuss job searching, interviews, salaries, and the tech job market.
 
-The classifier sorts posts into:
-
-1. career_doubt: the writer questions their own future in tech because of something that happened to them personally, such as rejections, layoffs, or struggling in interviews or classes
-2. market_take: a claim about the industry, not about the writer
-3. data_backed: argues with a checkable fact
-4. advice_request: writer asks for advice from peers
+The classifier sorts posts into four labels: 'career_doubt', 'market_take', 'data_backed', and 'device_request'. These are the common trends that I saw in the posts in the Reddit community. 
 
 ---
 
@@ -61,10 +56,23 @@ The classifier sorts posts into:
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `career_doubt`
 
 **Definition:**
 
+The writer questions their own future in tech because of something that happened to them personally, such as rejections, layoffs, or struggling in interviews or classes
+
+**Example 1:**
+> 
+
+**Example 2:**
+>
+
+### `market_take`
+
+**Definition:**
+
+a claim about the industry, not about the writer
 
 **Example 1:**
 >
@@ -72,15 +80,30 @@ The classifier sorts posts into:
 **Example 2:**
 >
 
-### `label_two`
+### 'data_backed'
 
 **Definition:**
+
+argues with a checkable fact
 
 **Example 1:**
 >
 
 **Example 2:**
 >
+
+### 'advice_request'
+
+**Definition:**
+
+writer asks for advice from peers
+
+**Example 1:**
+>
+
+**Example 2:**
+>
+
 
 ### The hardest boundary
 
