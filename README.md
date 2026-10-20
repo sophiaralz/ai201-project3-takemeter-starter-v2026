@@ -60,60 +60,97 @@ The classifier sorts posts into four labels: 'career_doubt', 'market_take', 'dat
 
 **Definition:**
 
-The writer questions their own future in tech because of something that happened to them personally, such as rejections, layoffs, or struggling in interviews or classes
+The writer questions their own future in tech because of something that happened to them personally, such as rejections, layoffs, lack of interest, or struggling in interviews or classes
 
 **Example 1:**
-> 
+> Title: AI has made me feel lost, I have lost my purpose and feel clueless
+Body: Hey guys,
+I'm 28 and graduated in 2025. I was from a non-tech background and started self-learning coding around 2020 because everyone said it has a lot of opportunities in terms of jobs. Then after graduating I got a remote job with an average starting salary in India. I worked here for a year. Around February my work changed drastically, I was not coding anymore but prompting Claude and watching everything built.
+
+Coding was no longer mentally rewarding for me. I was not happy for having figured out the root cause of a bug that I had to debug using GNU debugger. I was no longer happy for finding an approach of implementing a feature from a Stack Overflow article written 11 years ago. I prompted AI all day, watched it build features end to end, tested it and shipped. Doing this everyday for the past few months really exhausted me. My work was no longer rewarding and no longer interesting. Despite struggling so much to get my first job after so much financial hardship I lost all motivation to work. So I decided I didn't want to do this kind of job and I quit.
+
+Throughout my childhood I always found solving problems mentally stimulating like most other people. Whenever I solved a difficult math problem I felt good. It was what gave me purpose in life. Now humans are not needed to solve problems anymore. All intellectual labour can now be done by machines. Now I don't know what to do next in my career.
+
+I'm from a lower middle class background. I was thinking of getting a PhD in AI, but what kind of research should I do if all the thinking and brainstorming is done by LLMs? I'm clueless and I'm feeling like I have no purpose, and I'm depressed (even su*cidal). Guys, is anyone in the same situation as me because I feel really lost. Can anyone help me to find a solution to this?
+
+Only serious answers pls, thanks a lot 🙏.
 
 **Example 2:**
->
+> Title: Probably a bad decision but willing to pivot. Need advice
 
-### `market_take`
+Body: I am feeling burnt out from my job commuting 4 days a week to office and dealing with a toxic founder at a startup. I‘m the only engineer and built alot of their software products. the company is maturing now and I’m at the point of jus feeling like quitting. I have 3 yoe and I know market is tough. if I never get back to industry I am fine with that because I’m willing to pivot to something else. I’m just feeling very burnt out working and it’s been affecting my productivity to job search. anyone gone through similar burnouts and how did you deal with it?
+
+### `interview_advice`
 
 **Definition:**
 
-a claim about the industry, not about the writer
+Ask for advice about interview
 
 **Example 1:**
->
+> Title: Need suggestions on AI Coding round at LinkedIn
+Body: Hi,
+I'm in the loop for SSE role at LinkedIn and the first round is AI Coding round. A few things I've understood from here and there are -
+
+Ensure detailed and unambiguous prompts.
+
+Review AI code and read it manually before accepting.
+
+Is there anything else that might help me here? Has anyone prepared/given this round before? What kind of Rubrics are we looking at here? I know that the question is going to be a leetcode medium/hard - but how am I going to be judged?
+
+Can I one-shot with a long prompt? Would that be a positive signal?
+For instance, I was practicing All O One data structure leetcode - and this is the prompt I gave -
+
+Overall approach - 
+Plan the following changes and ask any clarifying questions if needed. Generate a few test cases that include edge cases, and troubleshoot the approach against these cases.  We will be using a dictionary with a doubly linked list to achieve all the operations in constant time.  
+
+Structure of the Doubly linked list - 
+Prev next pointers as standard. The val field would be an array/set of strings + an integer (frequency). Each node would be a bucket for a frequency. If 5 words appear 5 times, then a node with value would have those 5 strings in it's set.
+
+Dictionary design - 
+Simple key -> value where key is a string, and value is the node in which string is present. (Here node means the bucket. So if the bucket's val's set contains that string -> the mapping b/w key and value should exist. 
+Instructions - 
+
+Init - 
+Just instantiate the dictionary and the DLL.
+
+Inc -  
+Check if the value is already present. If YES, get the node. Check the adjacent node (to the right). If it has a frequency of old value + 1, then move the string from the current bucket to the next bucket. If NO, create a new bucket (node) and insert to right. 
+
+Dec -  
+Check if the value is already present. If YES, get the node. Check the adjacent node (to the left). If it has a frequency of old value - 1, then move the string from the current bucket to the previous bucket. If NO, create a new bucket (node) and insert to left. If this is the first element being added, you would have to create a new node, and set the head and tail to it.
+
+Get max key - 
+Return a random value from the tail 
+
+Get min key - 
+Return a random value from the head.
+
+The DLL is basically a sorted list of frequency buckets. Encouraged to ask questions before starting implementation to ensure correctness. Stress test the cases against the problem statement and expected output.
+Would something like this pass the bar? If yes, would it be a strong hire? Post this the AI came up with some missing edge cases, and I implemented it.
+
+Is one-shotting considered bad? Should I break down into multiple prompts like "Give me a double linked list structure with xyz parameters"?
+
+Any suggestions are appreciated. Thanks!
 
 **Example 2:**
->
+> Title: Google swe internship process
+Body: I have my first technical interview with Google coming up, I wanted to ask is it true that they do the interview on Google Docs?? How exactly do we do test cases in that case and how strict will they be on syntax errors?
 
-### 'data_backed'
-
-**Definition:**
-
-argues with a checkable fact
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### 'advice_request'
-
-**Definition:**
-
-writer asks for advice from peers
-
-**Example 1:**
->
-
-**Example 2:**
->
+Thanks :)
 
 
 ### The hardest boundary
 
 **Which two labels:**
 
+'career_doubt' and 'interview_advice' 
+
+
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
 
-
+If the post asks about an interview process, it is 'career_doubt' if it includes negative context about their last job (like getting laid off because of AI)
 
 ---
 
@@ -123,6 +160,8 @@ writer asks for advice from peers
      cases. -->
 
 **Where the posts came from:**
+
+Reddit
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
