@@ -54,7 +54,7 @@ whether you hit them:
 ## 1. 
 
 <!-- Your criterion. It must name a number. -->
-Overall accuracy on the test set is at least 0.65 on all three seeds
+Overall accuracy on the test set is at least 0.65 on all three seeds.
 
 
 **Why this target:**
@@ -93,7 +93,7 @@ This is my hardest boundary. Interview posts that mention layoffs are 'career_do
 
 <!-- Your criterion. -->
 
-Each label is at least 25% of my dataset
+Each label is at least 25% of my dataset.
 
 
 **Why this target:**
@@ -110,7 +110,7 @@ The model's most confident predictions are at least 15 points more accurate than
 
 **Why this target:**
 
-Its confidence should mean something. In the practice run, it was about equally confident whether it was right or wrong (0.37 vs 0.35)
+Its confidence should mean something. In the practice run, it was about equally confident whether it was right or wrong (0.37 vs 0.35).
 
 
 ---
