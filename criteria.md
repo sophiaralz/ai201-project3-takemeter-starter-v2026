@@ -51,14 +51,15 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. 
 
 <!-- Your criterion. It must name a number. -->
-
+Overall accuracy on the test set is at least 0.65 on all three seeds
 
 
 **Why this target:**
 
+With 3 labels, random guessing gets about 33%, so 0.65 is about double that. I didn't go higher because my test set is only about 25 posts, so one seed can lose a few points on bad luck. 
 
 
 ---
@@ -66,11 +67,11 @@ whether you hit them:
 ## 2.
 
 <!-- Your criterion. -->
-
+Each label ('career_doubt', 'interview_advice', 'market_take') has an F1 of at least 0.60 on all three seeds.
 
 
 **Why this target:**
-
+Accuracy can look fine while one label fails. In the practice run, one label scored 0.0. It's lower than criterion 1 because each label only has about 8 test posts, so one wrong post moves its F1 a lot. 
 
 
 ---
@@ -78,12 +79,13 @@ whether you hit them:
 ## 3.
 
 <!-- Your criterion. -->
+No more than 2 test posts that are really 'interview_advice' are predicted as 'career_doubt', on any seed.
 
 
 
 **Why this target:**
 
-
+This is my hardest boundary. Interview posts that mention layoffs are 'career_doubt', but plain interview questions aren't. If the model mixes these up often, my decision rule isn't working. 
 
 ---
 
@@ -91,10 +93,11 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
+Each label is at least 25% of my dataset
 
 
 **Why this target:**
-
+Most posts in r/cscareerquestions are 'career_doubt', so the other two will be rarer unless I go looking for them. Below 25%, a label has too few test posts for criterion 2 to mean anything. 
 
 
 ---
@@ -102,11 +105,12 @@ whether you hit them:
 ## 5.
 
 <!-- Your criterion. -->
-
+The model's most confident predictions are at least 15 points more accurate than its least confident ones on all three seeds.
 
 
 **Why this target:**
 
+Its confidence should mean something. In the practice run, it was about equally confident whether it was right or wrong (0.37 vs 0.35)
 
 
 ---

@@ -44,7 +44,7 @@
 
 r/cscareerquestions, a Reddit community where software engineers and CS students discuss job searching, interviews, salaries, and the tech job market.
 
-The classifier sorts posts into four labels: 'career_doubt', 'market_take', 'data_backed', and 'device_request'. These are the common trends that I saw in the posts in the Reddit community. 
+The classifier sorts posts into four labels: 'career_doubt', 'market_take', 'interview_advice'. These are the common trends that I saw in the posts in the Reddit community. 
 
 ---
 
@@ -84,7 +84,7 @@ Body: I am feeling burnt out from my job commuting 4 days a week to office and d
 
 **Definition:**
 
-Ask for advice about interview
+The writer asks for help preparing for, or understanding, a specific interview or hiring process, without doubting their career overall. 
 
 **Example 1:**
 > Title: Need suggestions on AI Coding round at LinkedIn
@@ -139,6 +139,25 @@ Body: I have my first technical interview with Google coming up, I wanted to ask
 Thanks :)
 
 
+### 'market_take'
+
+**Definition:**
+The writer makes a general claim or question about the tech job market, not about themselves
+
+
+**Example 1:**
+Title: If there is no shortage of cs grads and software engineers, why has TC not come down?
+
+Body: Faang company new grad packages are over 200k. I’m curious why the TC is high and increasing every year. Is it because there is no shortage of software engineers but still a huge shortage of competent engineers who meet the technical bar?
+
+**Example 2:**
+
+Title: Did Microsoft basically stop hiring Product and Program managers in the US?
+
+Body: There are 69 openings for product roles at MSFT in the US right now (most of them are principal+). In comparison, Google (a smaller company by headcount) has 166 and Amazon over 500.
+
+
+
 ### The hardest boundary
 
 **Which two labels:**
@@ -150,7 +169,7 @@ Thanks :)
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
 
-If the post asks about an interview process, it is 'career_doubt' if it includes negative context about their last job (like getting laid off because of AI)
+If the post asks about an interview process and includes negative context about the writer's own career (layoffs, many rejections), it is 'career_doubt'. If it only asks about the interview, it's 'interview_advice'.
 
 ---
 
