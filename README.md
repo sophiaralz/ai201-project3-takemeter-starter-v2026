@@ -243,11 +243,17 @@ I chose market_take because it's a general question about a value of a degree, n
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
 
+
+
 **Anything I changed from the defaults, and why:**
+
+I did not change anything.
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
+
+'career_doubt' had only 7 examples in the test split (fewer than 8).
 
 
 
