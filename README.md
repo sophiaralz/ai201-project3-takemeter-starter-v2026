@@ -44,7 +44,7 @@
 
 r/cscareerquestions, a Reddit community where software engineers and CS students discuss job searching, interviews, salaries, and the tech job market.
 
-The classifier sorts posts into four labels: 'career_doubt', 'market_take', 'interview_advice'. These are the common trends that I saw in the posts in the Reddit community. 
+The classifier sorts posts into three labels: 'career_doubt', 'market_take', 'interview_advice'. These are the common trends that I saw in the posts in the Reddit community. 
 
 ---
 
@@ -189,10 +189,10 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| interview_advice | 85 | 42.3% |
+| market_take | 73 | 36.3% |
+| career_doubt | 43 | 21.4% |
+| **Total** | 201 | 100% |
 
 **Three hard cases**
 
@@ -201,24 +201,45 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 **1.**
 > *The post:*
->
+> how tf am i supposed 2 get a job if i need experience to get one?? 
+you need experience to get a job but yOU NEED A JOB TO GET EXPERIENCE
+legit what da hell am i supposed to do about that
 > *Could have been:*
->
+> market_take
 > *I chose, because:*
+"You need experience to get a job" is a general claim about the market, but the post is a new grad's personal frustration, so I picked career_doubt.
 
 **2.**
 > *The post:*
->
+> Been laid off 5 months ago
+Been laid off 5 months ago as a software developer.
+
+I managed to land a few job interviews during the second month, but I couldn't move forward with them at the time due to my immigrant status.
+
+Thankfully, I worked hard to sort out my legal status, and I'm officially good to work again!
+
+However, I haven't been able to land any new interviews since then, and I'm looking for advice on how to improve my chances. I'm starting to feel a bit out of the loop with where the tech field is heading—it almost feels like AI is rapidly shifting everything or taking over entry/mid-level roles.
+
+I'd really appreciate any advice, resources, or leads on
+
+staying up to date and improve myself technical wise.
+
+Thanks in advance for any help!
 > *Could have been:*
->
+> interview_advice
 > *I chose, because:*
+I chose career doubt because it asks how to get more interviews, but the decision rule says a layoff is a writer's own story which makes it a career_doubt.
 
 **3.**
 > *The post:*
->
-> *Could have been:*
->
+> Thoughts on masters degree?
+For anyone who went back and got a masters recently, did it help you with job search / interviews? Good ROI? I’m especially curious about online programs like Georgia tech
+
+> *Could have been:* 
+interview_advice
+> interview_advice
 > *I chose, because:*
+I chose market_take because it's a general question about a value of a degree, not a specific hiring process. 
 
 ---
 
