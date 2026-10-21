@@ -239,20 +239,24 @@ I chose market_take because it's a general question about a value of a degree, n
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** 
+
+distilbert-base-uncased
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
 
+10 epochs, learning rate 2e-5, batch size 16, seed 42, max length 128 tokens
 
 
 **Anything I changed from the defaults, and why:**
 
-I did not change anything.
+I raised epochs from 3 to 10. With the default 3 epochs, the model predicted 'interview_advice' for all 31 test posts (accuracy 41.9%, macro F1 0.20): it was just guessing the most common label. With 10 epochs, accuracy went up to 67.7% and macro F1 to 0.58, and the model now predicts all three labels. 
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
 
+'interview_advice': 13, 'market_take': 11, 'career_doubt': 7.
 'career_doubt' had only 7 examples in the test split (fewer than 8).
 
 
@@ -270,15 +274,16 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked Claude to remove 5 duplicate posts that I mistakenly added from labels.csv, add 5 new posts I collected, and label them. 
+- *What came back:* It removed the second copy of each duplicate, added the 5 posts with labels (2 'interview_advice', 3 'career_doubt'), and flagged one as borderline:
+the "how am I supposed to get a job if I need experience" post, which could be 'career_doubt' or 'market_take'.
+- *What I changed:* I checked its labels against my definitions and decision rule. While reviewing hard cases, I rebelled "Thoughts on masters degree?" from 'interview_advice' to 'market_take', because it's a general question about the value of a degree, not about a specific hiring process. 
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked why my results were so bad: the model predicted 'interview_advice' for every test post (41.9% accuracy, macro F1 0.20).
+- *What came back:* Claude explained the model was just guessing the most common label and suggested raising epochs from 3 to 10, which is usually the first thing to try with only about 140 training posts.
+- *What I changed:* I changed EPOCHS to 10 and re-ran training. Accuracy went to 67.7% and macro F1 to 0.58. 'career_doubt' is still weak (1 of 7 caught), so I'm noting that rather than treating the problem as fixed.
 
 **Pre-labelling disclosure:**
 
