@@ -213,17 +213,10 @@ legit what da hell am i supposed to do about that
 > *The post:*
 > Been laid off 5 months ago
 Been laid off 5 months ago as a software developer.
-
 I managed to land a few job interviews during the second month, but I couldn't move forward with them at the time due to my immigrant status.
-
 Thankfully, I worked hard to sort out my legal status, and I'm officially good to work again!
-
 However, I haven't been able to land any new interviews since then, and I'm looking for advice on how to improve my chances. I'm starting to feel a bit out of the loop with where the tech field is heading—it almost feels like AI is rapidly shifting everything or taking over entry/mid-level roles.
-
-I'd really appreciate any advice, resources, or leads on
-
-staying up to date and improve myself technical wise.
-
+I'd really appreciate any advice, resources, or leads on staying up to date and improve myself technical wise.
 Thanks in advance for any help!
 > *Could have been:*
 > interview_advice
@@ -234,7 +227,6 @@ I chose career doubt because it asks how to get more interviews, but the decisio
 > *The post:*
 > Thoughts on masters degree?
 For anyone who went back and got a masters recently, did it help you with job search / interviews? Good ROI? I’m especially curious about online programs like Georgia tech
-
 > *Could have been:* 
 interview_advice
 > interview_advice
