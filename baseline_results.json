@@ -1,0 +1,189 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 31,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 31,
+    "accuracy": 0.3548387096774194,
+    "f1_macro": 0.36546583850931674,
+    "per_label": {
+      "career_doubt": {
+        "precision": 0.42857142857142855,
+        "recall": 0.42857142857142855,
+        "f1": 0.42857142857142855,
+        "support": 7
+      },
+      "interview_advice": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3076923076923077,
+        "f1": 0.32,
+        "support": 13
+      },
+      "market_take": {
+        "precision": 0.3333333333333333,
+        "recall": 0.36363636363636365,
+        "f1": 0.34782608695652173,
+        "support": 11
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "Do other industries have this same massive conversation around work visas, hiring cartels, department demographics etc\nMeta\nIt's basically a daily topic of conversation on tech career subs but I'm wondering if this shows up in finance, manufacturing, construction, pharma (corporate white collar roles outside of IT/dev roles, that is) and so on",
+      "gold": "market_take",
+      "predicted": "market_take"
+    },
+    {
+      "text": "How did you move on after getting rejected from a potentially life-changing job?\nBeen job hunting for a few months and just got rejected after several rounds for a security role at an AI research org. The work lined up really well with my background, and the pay would\u2019ve been life-changing.\nWhat\u2019s eating at me is that I prepared a lot but didn\u2019t feel like I gave my best interview. Some answers came out poorly, even on things I\u2019ve dealt with for years. Now I\u2019m stuck replaying what I should\u2019ve said.\nI know perfect answers wouldn\u2019t have guaranteed an offer. Still, this one hurts more than the other rejections because opportunities with that combination of work and compensation aren\u2019t common.\nFor anyone who\u2019s been through something similar, what actually helped you stop kicking yourself and move forward?\n\nAt the expected salary range of this position , $300k+, the applicant pool is greater and probably people that are way more qualified than me but the part that stings is that I had a real shot at this and it didn't go the way I had hoped. I picked a complex project over a simple one and that may have led to me to not being polished during the interview. That's the problem with using LLM's to build you something and then not knowing the in's and out's when it comes to explaining the project",
+      "gold": "career_doubt",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "If your company started doing layoffs and you weren't directly affected, would you start applying?\nTitle \u2013 with all the layoff news, if your company did a large wave of layoffs in light of \"restructuring\", would you begin applying elsewhere? Why or why not? What factors would influence your decision?\n\nExample, with Netflix \u2013 great comp and perks, but is that reason to avoid preparing for the worst?",
+      "gold": "market_take",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "How exactly is one supposed to stay up to date with everyday happenings of the tech industry?\nStudent\na friend/senior in tecch suggested me to stay informed about the latest progresses in the field, make contacts and actively look for internships once i make it past my 1st college year but how exactly is one supposed to do all of these.\n\ni'm seeing posts of friends who entered college a year earlier attending summits and even a speaker in one of those, idk some \"open suse summit\". now i am totally NOT speaking from a place of jealousy, i just need to know that if there's no direct help from my college how am i supposed to know about any of this? Now yes the fact of the matter is that he's in a better college than mine but still, the least i can do is try, right? or should i be working/focusing on something else. I am obv trying to get a decent cg while i am at it, but what else??",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "Programming languages DO matter, just not necessarily for the reasons people think\nExperienced\nPeople often say \"programming languages don't matter,\" meaning a good dev should be able to pick up anything. I agree\u2014up to a point. But there's a big nuance people miss: how well do you actually know the domain?\n\nThink of it this way:\n\nIf you\u2019re a backend dev switching from Node to Go, you're learning new syntax, but you already know how APIs work. It's an easy transition.\n\nIf you\u2019re a Node dev staying in TypeScript but switching to infrastructure automation, you already know the language, so you can focus entirely on learning the new domain.\n\nBut if you\u2019re a Node dev switching to Go for infrastructure work, you're learning the syntax, the domain, and the tools all at once. That's a massive hurdle. It's like trying to cross greased monkey bars.\n\nThe ramp-up time is way longer when you're learning both the language and the concepts, which is why I don't buy the blanket \"languages don't matter\" claim.\n\nWhat about AI? Some say it makes the language irrelevant since it can write code for you. AI is great for syntax, but if you don't understand the domain, how can you even tell if the code it's giving you is actually good? Just because it runs doesn't mean it's the right way to build it.\n\nAI can help you write code, but it doesn't automatically mean you know how to check if that code is right.\n\nMy main point:\n\nI think developers need some kind of solid foundation to start with.\n\nIf the language is new, knowing the concepts helps.\n\nIf the concepts are new, knowing the language helps.\n\nBut if both are new, the learning curve gets a lot steeper.\n\nI'm not saying developers can't learn a new language and a new domain at the same time. Obviously, they can.\n\nI'm saying employers need to account for that extra learning time instead of expecting the same productivity and onboarding speed as someone who already knows the language or the domain.\n\nSo maybe \"programming languages don't matter\" is a bit of an oversimplification.\n\nMaybe a better way to put it is:\n\n\"Programming languages matter less when the underlying concepts are familiar.\"\n\nI'm curious what other engineers think. Have you ever had to jump into a project where both the language and the domain were new to you? How did that affect how long it took to get up to speed?",
+      "gold": "market_take",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "The average CS grad these days is absolutely cooked. Unless you are very good at CS, stay away from this field.\nI have a cs degree with 7 years of experience. When I first started I was a buffoon, total idiot, etc. But WHO ISN'T when they are 23 right out of college?\n\nIf I was graduating right now, I would be absolutely cooked.\n\nNow, am I all doom and gloom like this sub usually is? No, I do think CS will stay and you can make a lot of money working in CS.\n\nBut the bar to even get an entry level job is so high its INSANE.\n\nI have been in hiring committees the past 3 years. Mind you I have zero say in the hiring process, I just have to give feedback on the candidates.\n\nWe have turned down CS grads for low salary junior jobs that were 5 times better than me when I graduated college.\n\nIt makes me think, what is the average CS grad even doing these days?\n\nIt seems like you either have to excel or you are cooked.\n\nMind you, I have a friend who barely passed the NCLEX and is a total idiot BTW, it took him 3 times to finally pass. And you know what? He still is gainfully employed and is able to get a job easily.\n\nI have a friend who graduated in accounting with a 2.8 GPA or some crap like that, but he still got a low level accounting job after a couple hundred applications.",
+      "gold": "market_take",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "At your work right now how do you guys build apps/software? be brutal honest.\nExperienced\nFirst of all we all know the traditional way of how to build software.\n\nHuman programmer write code, test code, create PR, code review and merge to main.\n\nAnyway, I recently heard that some devs at big techs and normal tech companies around the world they let AI do every thing!\n\nThey use \"Spec driven development\" method and they let AI agents do this\n\nAI write code\n\nAI write unit tests\n\nAI create PR\n\nAI does code reviews\n\nAI merge to main.\n\nHowever some devs don't let AI does code reviews so they do it themself\n\nBut some devs let AI do everythings! And I'm talking about at work not hobby projects here.\n\nAs the title says.",
+      "gold": "market_take",
+      "predicted": "market_take"
+    },
+    {
+      "text": "We scanned 3.5 million hosts for exposed .git repos and walked away with 400 AWS keys\nLeaving a .git directory exposed is an old mistake with a single well known path, so we wanted to know how many organisations still make it. We pulled hostnames from certificate transparency logs, scanned 3.5 million live hosts, and found 28,000 repositories sitting wide open. \n\n400 AWS access keys came out of them, including one with access to a bucket of internal employment records, attendance logs and disciplinary files. Many of the credentials we pulled were still active when we tested. We disclosed them where we could find a contact.\n\nTom Steer, one of our security consultants, wrote up what we found and how gitreaper works, the tool we built to walk a repo's whole commit history in memory rather than writing 28,000 repositories to disk. That's also why we caught secrets in files that had been removed in later commits, which is often where the worst of it is.\n\nExposed .git is one of many thousands of issues that could be sitting on the internet waiting for someone to find them. We write custom Nuclei checks for that sort of thing and report them as vulnerabilities in Intruder, so it turns up in your scan results with the remediation advice attached.\n\nFull write-up: We found 28,000 .git repos sitting wide open. Here's what was inside",
+      "gold": "market_take",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "Internship dates discrepancy - could this affect background check?\nI'm currently a college junior, and I'm interviewing for internships for next year. \n\nI did a remote, unpaid internship at a very small startup this summer, but I was unexpectedly let go around end of July(partly my fault and I've taken responsibility for what happened). \n\nI had the internship listed on my resume as May - July since May was when we set up the first meeting and I signed the NDA and everything. That was supposed to be my original start date, but I didn't start any actual coding work until July 1 because I was still finishing up my courses. I reached out to the founder who hired me to sort this out, but I haven't gotten any response so I don't know which start date they have on file. \n\nMy resume already has May as the start date for the companies I'm interviewing with right now and my concern is that the employment verification might flag a discrepancy during a background check.\n\nAre unpaid internships even required for background check forms?\n\nWhat would happen if a date discrepancy were to actually happen?\n\nHow should I bring this up to recruiters if asked?",
+      "gold": "interview_advice",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "Tired working with unqualified colleagues, at the same time a lot of good candidates out there can't get hired\nExperienced\nI am tired of babysitting everyone in my team. There is a woman works remotely in my team not always show up in standup. Her PRs don't follow the instructions. Adding nonsense stuff outside the scope of her tickets. No test cases and no description about what she did.\n\nAnother new grad in office with a master degree in CS, she has trouble with basic RDBMS concepts. Using AI to generate code without review. She did something like fetching the entire table and filter the results instead of just query the matched results from DB directly. (The table is huge can easily hit few million rows in production). I have to work on everything like Java, TypeScript, Python development, System design, DB migration, different kinds of testing, understand hardware and work with the embedding systems, CI/CD pipeline, building Docker images and compose files etc...\n\nSince our main business is selling hardware solution with software as additional service, the CEO and founder is a sales background doesn't know much about software development.\n\nI don't understand why we can't hire proper candidates. And recently my colleague interviewed a guy with master degree for networking related position. From what I heard that guy doesn't even know how to use SSH and basic bash commands.",
+      "gold": "market_take",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "Support R&D (1.5 YoE, C++/SQL), wanting to switch to backend dev with AI/ML. MS DS grad in Dec. What actually moves the needle?\nLooking for honest advice on making a switch from support-side engineering to actual development.\n\nBackground\n\n-B.Tech in Mechanical Engineering from a top Indian engineering school, then switched into software.\n\n-About 1.5 years as an SDE at an IT services company, but the work was really support R&D on a mature enterprise data product (test data management / data masking): diagnosing customer tickets with SQL (Oracle, SQL Server, MySQL), fixing defects in an existing C++ codebase, and scripting ops work in Bash/Python\n\n-Finishing an MS in Data Science in the US in December 2026\n\nJob Applications experience\n\n- I have been applying rigorously for the past one month, and all i have been getting back are rejection mails mostly within a couple of days. Now I understand that its mostly the sponsorship filter and for some its the experience filter (2+ yrs). But even for new grad/early career roles, I dont think I have a reasonable shot at moving forward with atleast a screening or OA. Although I Built a few good projects, Im not sure that they are better than the generic ones. Anyway here's a set of them-\n\nWhat I\u2019ve built since\n\nAgentic RAG system: async FastAPI + Postgres backend, Next.js frontend, OpenTelemetry/Prometheus/Grafana, Helm on Kubernetes, CI, and a hand-reviewed eval set with two LLM judges cross-checked by hand. Only deployed locally so far.\n\nVector search library: HNSW in C++17 with Python bindings, benchmarked against FAISS/hnswlib/ScaNN on 1M embeddings, sharded gRPC service, CUDA kernels for exact search\n\nJob-board poller: runs unattended every 15 minutes against about 600 company job boards, with retries, rate-limit handling and state diffing\n\nMy gaps, as I see them\n\nI\u2019ve never built and shipped features on a team: no design reviews, no code review culture, no owning something end to end\n\nMy projects haven\u2019t faced real users or real load\n\nFrontend is thin\n\nQuestions\n\nHow do hiring managers read \u201csupport R&D\u201d experience? Should I present it as dev experience, or lead with projects and present myself as a new grad?\n\nWhat would most credibly close the \u201cnever shipped on a team\u201d gap: open-source contributions to a real project (vector DB or RAG framework), deploying a project publicly with real users, or something else?\n\nFor backend roles with AI/ML integration, which titles should I be searching? Backend SWE, ML engineer, AI engineer, ML platform? Is new grad the right level, or can I reasonably apply to \u201c1\u20133 YOE\u201d roles?\n\nIf you\u2019ve made the support to dev switch, what actually worked for you?\n\nThanks in advance. Happy to take blunt feedback.",
+      "gold": "interview_advice",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "\"[rejection reason] + Please keep in touch and apply for future positions!\"\nI've submitted a lot of applications, gone through a lot of interviews, and gotten a lot of rejections (and hopefully one offer but they're dragging their feet so i'm not holding my breath). A lot of the rejections (after multiple technical rounds) have amounted to \"We found someone we consider a better match for the role, but please do reach out about future positions\".\n\nMy question is - I assume I will start at zero just like everyone else if I apply again. Is this true? I mean there's some tiny optimistic part of my brain that thinks they would like to skip 6 hours of interviewing by going with someone they already talked to for 6 hours and generally liked, but then the much bigger part goes \"when there are hundreds of potentially qualified, better candidates applying, why would we go with someone we already passed on?\"\n\nI'm curious if any hiring managers or people in a position to actually make this decision have any thoughts...",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "Any stories of hope?\n3.5YOE as an engineer and just recently got laid off from a Fortune 50. While I do feel somewhat relieved (the writing was on the wall for months), the thought of sending dozens of applications into an abyss feels rather daunting.\n\nI know the job market is rough right now but for those of you who were laid off within the last year or so, did you find a light at the end of the tunnel? Especially those who are mid-level and not quite senior (but not entry-level either).",
+      "gold": "career_doubt",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "UKG screening for Software Engineer III\nIs anyone able to give advice for getting into UKG? Still on the job hunt 9 months after mass layoff at my company. Thank you!",
+      "gold": "career_doubt",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "Forward Deployed Engineers - are you enjoying the role?\nExperienced\nWant to learn more about day to day of the role from those actually doing it and those who did it before.\n\nWould love insights on whether you enjoyed working closer to the customers and how you managed the travel. Also would love to hear what you ended up doing afterwards (for those who used to do this role) and if you went back into an SWE role or decided to shift into a more product or managerial role?",
+      "gold": "market_take",
+      "predicted": "market_take"
+    },
+    {
+      "text": "How do you deal with managers who have AI delusions?\nI imagine a lot of people are experiencing similar issues, but I wanted to get your thoughts on what I should do about this.\n\nMy manager started developing the product from scratch using AI, but because she relies too heavily on the rules, she doesn't even review the errors. Even though I've pointed out that there are too many errors, she ignores my feedback, assuming it's just a reflex born out of \u201cfear of losing her job.\u201d Any processing error that isn\u2019t visible in the code could negatively impact clients with multi-million-dollar deals. We\u2019ve been developing with AI for a long time now, and even though there have been no issues with the product\u2019s quality, she\u2019s become fixated on this idea. I know for a fact that no such request has come from the clients. When I asked where this request came from, she told me that management wants to increase the use of AI and that if this doesn\u2019t suit me, I\u2019m free to leave. I don\u2019t know what to do in this situation, as I can see it could have very destructive consequences. Although she manages the entire process on her own, she presents it as if the whole team is working on it and making great progress. I brought up the situation during the quarterly reviews, but I realized that no one had read my report.",
+      "gold": "interview_advice",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "Got laid off by AI (who could've thought)\nNew Grad\nGot placed at a product-based company as an Associate Full stack Developer from a crap college at the start of this year. Did my internship until August. Had a probation period which was supposed to end in November. Out of nowhere I get a MS Teams meeting invitation \"regarding my employment\".\n\nJoined the meeting and they let 17 of us know that our roles are redundant because of AI and we are no longer needed. I literally was working on my probation report which I was supposed to submit on the 23rd and now they let me know they no longer needed me.\n\nI'm upset, demotivated and frustrated that stuff like this happens out of the blue. Not a single hint that I was going to get sacked but here I am now. Thankfully I saved up most of my money so it will keep me afloat for a while.\n\nLooking for another job in this economy is looking like hell. I guess I'll take some time off and brush up DSA again and attempt at another job. It's a shame because the workplace was really close by and the pay was decent too.\n\nEdit: There were around 100 employees. Nvm this company is doomed",
+      "gold": "career_doubt",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "Have personal projects become obsolete for showcasing your skills due to AI?\nStudent\nI remember that the meta used to be that to differentiate yourself and improve your CV to land your first job or intership, you had to have a strong showcase of technical personal projects. However, I feel that this has stopped being the case.\n\nI mean, somebody can just create a few beginner-level personal projects by just using AI. Has that made personal projects less relevant for hiring?\n\nWhat can someone do now instead?",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "TCS 2 yoe , stagnant career, Would love to connect with anyone offering career gudiance\nExperienced\nHey,\n\nI'll be short,\n\nThe title is all I will bore everyone with,\n\nIf you're interested in connecting with me for some guidance\n\nPlease DM or comment, I will reach out\n\nThanks in advance",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "Data Scientist trying to break into Research Engineer / Post-Training roles. Do I need an MS?\nNew Grad\nI\u2019m planning on prioritizing my path and was wondering if an MS is a soft requirement for some of these Research Engineer, Applied Scientist, Post-Training roles. I only have a BS but I work full time as a Data Scientist and was wondering how I should go about this career transition. I had research experience in Applied ML at my university and I\u2019m currently working on ML models/statistical methods at my current company. Here are the breakdowns for jobs I\u2019m looking at:\n\nCohere MTS Post-Training - https://www.linkedin.com/jobs/view/4259504707/\n\nPhD - 22%\nMasters - 48%\nBS/other - 30%\n\nResearch Engineers, Post-Training - https://www.linkedin.com/jobs/view/4458055063/\n\nPhD - 26%\nMasters - 52%\nBS/other - 22%\n\nGarner Health Associate Applied Scientist - https://www.linkedin.com/jobs/view/4465195772/\n\nMasters - 56%\nBS/other - 44%\n\nMy question is, will a BS ever get hired here? Or do they need some other exceptional qualifications to make up for it (conference paper, workshop paper, or other publications). Do projects matter at all anymore?",
+      "gold": "interview_advice",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "Communication Breakdown\nExperienced\nI'm currently in a meeting where we plan our next PI and I'm noticing a major issue that has been getting worse over the years, mostly the past few years: People cannot communicate anymore.\n\nIt is like Person A is communicating an issue, Person B responds with an answer that isn't related to Person A's communications though B believes it is resulting in A getting frustrated. A tries to articulate the issues in a different way, but it fails and people start talking past each other. It isn't just one or two people like this example, but entire departments of people.\n\nEveryone seems to have completely different mental maps of systems and processes even though all of the parties involved work on these same systems on a daily basis; almost like they all have separate realities. I'd say it isn't really an issue with articulation, since even if A articulates the issue perfectly, there are too many people who are erroneously comprehending what is said and end up misinforming others.\n\nThe result is frustration across the entire department. It is kind of scary in a way and I really hope this isn't happening in more serious fields like medical, aviation, etc.\n\nAnyone noticing anything similar where they work?",
+      "gold": "market_take",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "What do I need to be doing to level up my career as a current junior?\nI recently started a junior SWE role at a small company in my city. Like many, my goal is to break into a bigger company in the next few years. (not necessarily FAANG but maybe FAANG adjacent)\n\nMy question is what do I need to be doing day-to-day apart from trying to do the best I can at my current role? Do I need to be grinding leetcode and system design after work and on weekends? Building more projects?\n\nThanks!",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "What all can I do to get into a coding job?\nI've been working on my coding skills out of a python text book on my spare time for the past couple months now, and I've got a good handle on how coding is. I'm just curious if there's anything else I need to be doing and what I can do to qualify for a beginner job. Any online courses I can take? Or better yet. Place that trains you for the job?",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "In the middle of being put on PIP and Now Boss is Bugging me About Attendance?\nExperienced\nSo this is my first time being put on a PIP. I was on a what my boss called a Pre-PIP. I talked to my friends that have been put on PIP and sounded like it was basically not winnable and that I should just start looking for a new job. I've now been taking time off to take interviews. And now my boss is bugging me about attendance? I thought there was some kind of unwritten understanding that I would just take this time to get a new job? Did I misread this entire situation? I don't think my boss actually cares but maybe he has to cover his own ass?\n\nEdit: In California",
+      "gold": "interview_advice",
+      "predicted": "career_doubt"
+    },
+    {
+      "text": "I'm doing DSA in C++, know a little Java, and have no idea what I'm doing with my career. What should I do?\nStudent\nI'm a third-year IT student, and honestly, I'm worried about placements.\n\nI'm currently doing DSA in C++, know some basic Java from college, and have basic knowledge of Git and GitHub. I've made a few simple projects using Al, but I don't feel confident enough to call them proper projects or put them on my resume. Apart from these I don't have any other skills\n\nI genuinely don't know what skills to focus on, which tech stack to learn, or how to make my resume good enough for internships and placements. Seeing other people build projects and land internships makes me feel like I'm falling behind.\n\nFor those who have been in a similar situation, what would you recommend?\n\nWhat should my roadmap look like for the next 6-8 months?\n\nI'd appreciate honest, practical advice. I don't want generic motivation, I genuinely need some direction.",
+      "gold": "career_doubt",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "Am I losing it, or is this pre-call take-home assignment completely unhinged?\nHey everyone,\n\nI recently applied for a Senior SWE role at this Drupal web development agency, and I received a mandatory home assignment before any introductory call or recruiter screen, with a 5-day deadline.\n\nThe scenario is a fictional 6-person web agency \" managing ~50 client sites (WordPress/Drupal/Shopify), and they want a monitoring service to learn about outages and such.\n\nHere is what they want built and designed:\n\nPart A: Monitoring Service:\n\nBuild a working monitoring microservice from scratch. It has to check 50+ sites in a local Docker setup for availability, response times, keywords, and TLS expiry with dynamic check frequencies based on criticality. It also requires building custom debouncing logic to prevent alert storms, state storage/history, automated tests, and notification stubs.\n\nPart B: Azure Architecture:\n\n- Deploy the monitoring service to Azure with cost estimates and repeatable deployment definitions.\n\n- Design a target multi-region high-availability hosting strategy on Microsoft Azure for privacy-sensitive clients. Requirements: all data must stay in Canada, and sites must survive the total loss of an entire Azure region with explicit RPO/RTO commitments. Covers compute, databases, files, backups, secrets, networking, and edge.\n\nPart C: Written Explanation:\n\nAn up to 8-page document covering architectural trade-offs, how the monitoring scales to 500 sites, CMS-specific monitoring, self-monitoring, security, cost, and a future roadmap.\n\nWhat gets me is that this is sent before any human conversation. No intro call, no culture check, just straight into designing a multi-region disaster recovery cloud architecture and a full monitoring suite.\n\nThoughts?",
+      "gold": "interview_advice",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "Am I qualified to apply for OMSCS?\nNew Grad\nI have a bachelors in IT and an applied associates in CS. My associates degree leaned heavily into programming with a lot of project courses. The program was designed as a bridge between transferring to the partnered university while also being applied science.\n\nMorale of the story, my highest math course I have taken is trig, since my IT degree didn\u2019t require calculus. Between the mix of my degrees I have taken programming fundamentals 1 & 2, DSA, Object Oriented Paradigm, computer architecture, Software Communications and Computer Networks (basically distributed systems, we used C), along with tons of networking, cybersecurity, and business courses, plus my general study courses like English and Biology.\n\nBoth my degrees are accredited through my city\u2019s community college and the state university in the same city. I made right at 3.5gpa.\n\nI\u2019m not sure if I would need to take a higher math course to even be considered. Would calculus 1 suffice? Are there super cheap online options? Both my university and community college are fairly expensive.\n\nI am sorry if this is the wrong place to post this. The OMSCS subreddit mods deny the post and say to put it in the thread that is locked. So yea, I\u2019m here.",
+      "gold": "interview_advice",
+      "predicted": "market_take"
+    },
+    {
+      "text": "Does your company also not take interns anymore?\nI got back in touch with the teams I did my previous internships at, either because someone from school wanted to intern there, or for me to do another internships, and all 3 don't take interns anymore. They were internships where the teams rely on the intern to do a lot of work so maybe with AI they don't need it anymore... Honnestly I knew it was over, but I didn't realize it was that over.\n",
+      "gold": "career_doubt",
+      "predicted": "market_take"
+    },
+    {
+      "text": "To anyone retired, how often do you still code or do tech stuff?\nI often wonder how much I'll still design software and do security when I retire. Somedays I think I'll always keep it up. Some days I think I'll never look at it again when I'm done lol.\n\nFor those venerable veterans who have retired, how much do you still code or do network stuff in a home lab or cyber sec work or system work or whatever in your now ample spare time?",
+      "gold": "market_take",
+      "predicted": "market_take"
+    },
+    {
+      "text": "network engineer or any other good career\nNew Grad\nim passed out on april 2026 . i have knowledge in sdlc and build websites but dont have stuff to clear python,java in campus interview .recently done the research work for mvp on pvt ltd startup . they listed me as critical resources but i cant depend that because they are waiting for their funds and investment . i need to take a job but im not clear to choose the domain and dont skill . i get advised by cousin my sister in middle east . she told if you have interset you can go network,cybersecurity engineer . there are high demanding for network and good paying . development jobs are almost replaced on her company . so she told dont try development learn networks and get experience and ccna in india and then we can easily get more offer . anyone from network side guide me to get job and how was the job market for fresher . or any other job for fresher in tech side (non coding )",
+      "gold": "career_doubt",
+      "predicted": "interview_advice"
+    },
+    {
+      "text": "Those with mathematical software jobs, what do you do?\nNew Grad\nI'm really interested in software that's core for cutting-edge scientific or technology development. I've recently completed a CS degree, but I've found it difficult to find information on this mathematical software jobs given that this seems to be a (very) small part of the industry.\n\nThings like robotics, DSP, scientific computing, computational biology/neuroscience/etc. all sound really cool but I don't know whether these are realistic career paths. Everyone says that you need a PhD in biology/physics/EE/etc. to do the core mathematical algorithmic development, as well as the implementation and optimisation of the algorithm.\n\nMeanwhile CS/SWE people will just call the API to the algorithm and be instead focused on the overall systems integration & deployment.\n\nBut it's the former I want to do. I feel like I'm at a real disadvantage for not double majoring in maths, physics or even biology. Or that I straight up should've studied electrical engineering instead.\n\nI don't know much physics and electronics when it comes to hardware, and math wise I've done up to: vector calculus, linear algebra 2, ODEs, laplace transforms, probability theory and third year mathematical statistics. Haven't taken real analysis, abstract algebra or even HPC, numerical analysis or convex/non-convex optimsiaton.\n\nI know python and C well, and have taken various systems programming and ML classes that CS majors typically take.\n\nAnyway, for those with these types of jobs, how did you get there? Do I need a masters/PhD? What disciplines should I do them in? Are the odds of landing a position good? Is the effort involved all worth it? Is the job intellectually stimulating and fulfilling? Does it pay well? WLB? etc.\n\nAppreciate any advice or insight given",
+      "gold": "market_take",
+      "predicted": "interview_advice"
+    }
+  ]
+}

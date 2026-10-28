@@ -5,6 +5,6 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+career_doubt: The writer questions their own future in tech because of something that happened to them personally, such as rejections, layoffs, lack of interest, or struggling in interviews or classes.
+interview_advice: The writer asks for help preparing for, or understanding, a specific interview or hiring process, without doubting their career overall. 
+market_take: The writer makes a general claim or question about the tech job market, not about themselves.

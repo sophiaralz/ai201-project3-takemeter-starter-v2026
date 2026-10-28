@@ -301,20 +301,25 @@ the "how am I supposed to get a job if I need experience" post, which could be '
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.355 | 0.677 | +0.323 |
+| Macro F1 | 0.352 | 0.580 | +0.228 |
+| F1 — `career_doubt` | 0.455 | 0.250 | -0.205 |
+| F1 — `interview_advice` | 0.200 | 0.690 | +0.490 |
+| F1 - `market_take` | 0.400 | 0.800 | +0.400 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
 
+I predicted that my trained model will do much better in overall accuracy (above 0.5) than the baseline model. 
+
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
 
+The gap shows that my trained model did better on interview_advice and market_take, but suffered on the career_doubt. It is still not picking up career_doubt. 
 
+I also ran the baseline with bare label names (no definitions): accuracy was the same (0.355) and macro F1 dropped from 0.365 to 0.333. The definitions mainly helped interview_advice (F1 0.12 -> 0.32) but slightly hurt the other two labels, so they were worth only about 0.03 macro F1 overall. 
 
 ---
 
