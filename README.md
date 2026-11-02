@@ -330,28 +330,41 @@ I also ran the baseline with bare label names (no definitions): accuracy was the
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | >= 0.65 on all seeds | 0.677 | 0.613 | 0.581 | MISSED |
+| 2. Lowest per-label F1 | >= 0.60 for every label | 0.250 (career_doubt) | 0.000 (career_doubt) | 0.000 (career_doubt) | MISSED |
+| 3. interview_advice predicted as career_doubt | <= 2 posts | 0 | 0 | 1 | MET |
+| 4. Smallest label's share of dataset | >=25% | 21.4% (career_doubt) | 21.4% | 21.4% | MISSED |
+| 5. Accuracy of most confident third - least confident third | >= 15 points | 10 (0.70 vs 0.60) | 60 (0.90 vs 0.30) | 60 (0.90 vs 0.30) | MISSED |
+
+
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.677 | 0.613 | 0.581 | 0.097 |
+| Macro F1 | 0.580 | 0.462 | 0.447 | 0.133 |
+| F1 — `interview_advice` | 0.690 | 0.686 | 0.645 | 0.044 |
+| F1 — `market_take` | 0.800 | 0.700 | 0.696 | 0.104 |
+| F1 — `career_doubt` | 0.250 | 0.000 | 0.000 | 0.250 |
+
+Accuracy moved 0.097 across seeds. Enough that a criterion landing within that band can't really be called either way.
 
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
+| true \ predicted | interview_advice | market_take | career_doubt |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **interview_advice** | 10 | 3 | 0 |
+| **market_take** | 1 | 10 | 0 |
+| **career_doubt** | 5 | 1 | 1 |
+
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
 
+My biggest off-diagonal number is 5: five real career_doubt posts were predicted as interview_advice and none went the other way, so the model never learned my hardest boundary and labels any posts that mentions interviews as interview_advice, even when the writer is doubting their career. 
 
 
 ---
