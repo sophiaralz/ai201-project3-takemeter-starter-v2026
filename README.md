@@ -287,7 +287,7 @@ the "how am I supposed to get a job if I need experience" post, which could be '
 
 **Moment 3**
 
-- **What I asked for:" I asked Claude to check which posts it thinks is career_doubt in order to help minimize time spent reading hundreds of posts to get additional data for career_doubt.
+- **What I asked for:* I asked Claude to check which posts it thinks is career_doubt in order to help minimize time spent reading hundreds of posts to get additional data for career_doubt.
 - *What came back:* Claude gave me the list of posts that it thinks falls under career_doubt.
 - *What I changed:* I reviewed the posts and checked whether I myself thought it was career_doubt. When I agreed, I added it to the labels.csv. 
 
