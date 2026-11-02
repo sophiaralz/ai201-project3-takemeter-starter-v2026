@@ -405,7 +405,26 @@ My biggest off-diagonal number is 5: five real career_doubt posts were predicted
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+{
+  "compared": 30,
+  "agreed": 28,
+  "agreement_rate": 0.9333333333333333,
+  "disagreements": [
+    {
+      "text": "Times are down about 3% since the shoe rules changed, so obviously the shoes are the whole story and the sport has a problem.",
+      "staff": "hot_take",
+      "mine": "reaction"
+    },
+    {
+      "text": "Every injury thread on this forum is the same injury and the same three replies.",
+      "staff": "hot_take",
+      "mine": "analysis"
+    }
+  ],
+  "staff_posts_not_in_mine": 0
+}
+
+**Agreement rate:** 28 / 30 = 93%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -428,26 +447,29 @@ My biggest off-diagonal number is 5: five real career_doubt posts were predicted
      what you did across your own 200. -->
 
 **1.**
-> *The post:*
->
+> *The post:* 
+>"Times are down about 3% since the shoe rules changed, so obviously the shoes are the whole story and the sport has a problem."
 > *Staff said / I said:*
->
+> Staff said hot_take and I said reaction
 > *My call, and why:*
->
+> The staff is right, it's hot_take. It isn't a reaction because a reaction reports what just happened to the writer and how it felt, and this post says nothing about the writer. It makes a general claim about the sport ("the shoes are the whole story and the sport has a problem")
+
 > *Which pile:*
+Rules 1 and 2 both covered it, and the taxonomy gives a near-identical example: I let the tone decide instead of the rule.
 
 **2.**
 > *The post:*
->
+> "Every injury thread on this forum is the same injury and the same three replies."
 > *Staff said / I said:*
->
+> The staff said hot_take and I said analysis
 > *My call, and why:*
->
+>The staff is right, it's a hot_take. Analysis needs a checkable fact, like a date, a time, a quote, etc. However, this post offers none. "Every" and "the same" are a confident generalization, which is exactly the hot_take definition: "a confident claim with no support offered."
 > *Which pile:*
+The analysis definition requires an actual fact in the post, and there isn't one. I confused a "claim you could check" with "a claim backed by a fact."
 
 **What the pattern in my disagreements tells me:**
 
-
+Both disagreements were hot_take posts I labeled as something else, and both are pile (a): the rules covered them, but I followed the post's tone instead of the rule. If I do that on my own data, I may have applied my career_doubt vs. interview_advice rule inconsistently, which could be party of why my model never learned that boundary. 
 
 ---
 
