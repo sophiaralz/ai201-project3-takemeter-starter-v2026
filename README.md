@@ -285,6 +285,12 @@ the "how am I supposed to get a job if I need experience" post, which could be '
 - *What came back:* Claude explained the model was just guessing the most common label and suggested raising epochs from 3 to 10, which is usually the first thing to try with only about 140 training posts.
 - *What I changed:* I changed EPOCHS to 10 and re-ran training. Accuracy went to 67.7% and macro F1 to 0.58. 'career_doubt' is still weak (1 of 7 caught), so I'm noting that rather than treating the problem as fixed.
 
+**Moment 3**
+
+- **What I asked for:" I asked Claude to check which posts it thinks is career_doubt in order to help minimize time spent reading hundreds of posts to get additional data for career_doubt.
+- *What came back:* Claude gave me the list of posts that it thinks falls under career_doubt.
+- *What I changed:* I reviewed the posts and checked whether I myself thought it was career_doubt. When I agreed, I added it to the labels.csv. 
+
 **Pre-labelling disclosure:**
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
@@ -481,8 +487,8 @@ Both disagreements were hot_take posts I labeled as something else, and both are
 
 ## The Improvement
 
-I added _ more career_doubt posts, raising it from 43 posts (21.4%) to _ (_%). I didn't change any settings
 **What I changed:**
+I added _ more career_doubt posts, raising it from 43 posts (21.4%) to _ (_%). I didn't change any settings.
 
 **Which diagnosis pointed at it:**
 Diagnoses #2 and #4 point at it. career_doubt failed because it had too few examples, not because I labeled it inconsistently. (my agreement rate was 93%). 
@@ -515,12 +521,17 @@ So more data helped the model on one split, but not consistently. My reading is 
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
+**1. Overall accuracy (>= 0.65): missed (0.594 / 0.719 / 0.594).**
+Accuracy is low mainly because the model keeps getting career_doubt posts wrong, so fixing career_doubt would fix this too. I stopped here because the assignment only allowed one improvement. 
+
+**2. Every label F1 >= 0.60: missed (career_doubt 0.20 / 0.67/ 0.00).**
+Next, I would collect many more career_doubt posts, especially ones that also talk about interviews, since that is the boundary the model gets wrong. I stopped because of time. Clear career_doubt posts were hard to find and only 12 of the roughly 40 posts I checked fit the label. 
 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
-
+I meant career_doubt to describe someone who doubts their future in tech, even if their post also mentions interviews. Instead, the model learned to go by topic: on two fo the three seeds, 6 of 8 career_doubt posts were predicted as interview_advice, so it treats any post about interviewing or applying as interview_advice. 
 
 
 <!-- ═════════════════════════════════════════════════════════════════════
