@@ -376,11 +376,11 @@ My biggest off-diagonal number is 5: five real career_doubt posts were predicted
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | >= 0.65 on all seeds | MISSED | 0.677 / 0.613 / 0.581; only seed 42 cleared it |
+| 2 | Every label F1 | >= 0.60 | MISSED | career_doubt F1 was 0.25 / 0.00 / 0.00; the other two labels were 0.65-0.80 |
+| 3 | interview_advice predicted as career_doubt | <= 2 posts | MET | 0 / 0 / 1, but only because the model almost never predicts career_doubt |
+| 4 | Each label's share of dataset | >= 25% | MISSED | career_doubt is 43/201 = 21.4% |
+| 5 | Most confident third beats least confident third | >= 15 points | MISSED | 10 / 60 / 60 points; seed 42 fell short |
 
 **Diagnoses**
 
@@ -393,7 +393,13 @@ My biggest off-diagonal number is 5: five real career_doubt posts were predicted
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
 
+**1. Overall accuracy - same cause as #2.** interview_advice and market_take had F1 of 0.65-0.80 on every seed, so they aren't what pulled accuracy down. The 7 career_doubt test posts were almost all wrong (1, 0 and 0 correct), which alone costs about 20 points of accuracy. If career_doubt is fixed, this one should also be fixed.
 
+**2. Every label F1 (career_doubt) - too few examples plus a genuinely hard pair, not inconsistent labelling.** career_doubt F1 was 0.25, 0.00 and 0.00. My confusion matrix shows the misses go one way: 5, 6 and 5 real career_doubt posts were called interview_advice, and almost none went the other way. My agreement check was 28/30 (93%), and both disagreements were rules I applied loosely, not a pattern of applying one boundary two ways, so labelling is probably not the main cause. Instead, career_doubt has only 43 posts (about 30 in training, 7 in test), and by my own decision rule many career_doubt posts also ask about interviews. The model sees few examples of a label that looks a lot like my biggest label, so it falls back on interview_advice.
+
+**4. Label balance - too few examples, from how I collected.** This is about my dataset, not the model: career_doubt is 21.4%. In criteria.md I expected career_doubt to be the most common label, but I ended up collecting fewer of them than of the other two. This feeds directly into misses #1 and #2.
+
+**5. Confidence - test set too small to measure it reliably.** On seeds 7 and 2024, the most confident third was 60 points more accurate than the least confident (0.90 vs 0.30), so the model's confidence does mean something. Seed 42 missed by one post: each third is only 10 posts, so one post moves the number by 10 points. It is still a miss because the target has to hold on all three seeds.
 
 ---
 
@@ -475,26 +481,33 @@ Both disagreements were hot_take posts I labeled as something else, and both are
 
 ## The Improvement
 
+I added _ more career_doubt posts, raising it from 43 posts (21.4%) to _ (_%). I didn't change any settings
 **What I changed:**
 
 **Which diagnosis pointed at it:**
+Diagnoses #2 and #4 point at it. career_doubt failed because it had too few examples, not because I labeled it inconsistently. (my agreement rate was 93%). 
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | >= 0.65 on all seeds | 0.594 | 0.719 | 0.594 | MISSED |
+| 2. Lowest per-label F1 | >= 0.60 for every label | 0.200 (career_doubt) | 0.667 (career_doubt) | 0.000 (career_doubt) | MISSED |
+| 3. interview_advice predicted as career_doubt | <= 2 posts | 0 | 2 | 0 | MET |
+| 4. Smallest label's share of dataset | >= 25% | 25.8% (career_doubt) | 25.8% | 25.8% | MET |
+| 5. Accuracy of most confident third - least confident third | >= 15 points | 30 (0.80 vs 0.50) | 20 (0.90 vs 0.70) | 60 (0.80 vs 0.20) | MET |
+
 
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
 
+Partly, but not reliably. I added 12 career_doubt posts (43 -> 55, 21.4% -> 25.8%). Criteria 4 and 5 went from MISSED to MET, but 1 and 2 are still missed.
 
+On seed 7 it worked. career_doubt F1 went from 0.00 to 0.67, every label cleared 0.60, and accuracy reached 0.719. But on seeds 42 and 2024, career_doubt F1 stayed at 0.20 and 0.00, and 6 of the 8 career_doubt test posts were still called interview_advice, the same one-way miss as before. Seed 42's accuracy actually dropped (0.677 -> 0.594). Average accuracy barely moves (0.624 -> 0.636), while average macro F1 rose from 0.496 to 0.562. 
+
+So more data helped the model on one split, but not consistently. My reading is that 12 extra posts (about 8 more in training) still isn't enough for the model to learn the career_doubt vs. interview_advice boundary, and that the pair is genuinely hard, because by my own rule many career_doubt posts also talk about interviews. However, there is one caveat: adding posts changed the test split, so before and after aren't measured on exactly the same posts. 
 
 ---
 
